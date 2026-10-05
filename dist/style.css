@@ -207,7 +207,8 @@ section:not(.hero):not(.services) { padding: 70px 0; }
   .motion-enabled .motion-reveal { opacity: 1; transform: none; transition: none; }
   .carousel-track, .carousel-slide, .gallery-open img, .gallery-zoom, .lightbox-shell { transition: none; animation: none; }
 }
-.faq-section { background: #f6faff url("assets/backgrounds/light-wave-bg.png") center / cover no-repeat; }
+.light-content-group { background: #f6faff url("assets/backgrounds/light-wave-bg.png") center top / cover no-repeat; }
+.faq-section { background: transparent; }
 .faq-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 54px; align-items: start; }
 .faq-list { display: grid; gap: 10px; }
 .faq-list details { background: #fff; border: 1px solid #dbe8f3; border-radius: 14px; padding: 0 18px; }
@@ -216,7 +217,7 @@ section:not(.hero):not(.services) { padding: 70px 0; }
 .faq-list summary::after { content: "+"; position: absolute; right: 0; top: 13px; color: var(--blue); font-size: 1.35rem; font-weight: 400; }
 .faq-list details[open] summary::after { content: "−"; }
 .faq-list details p { color: var(--muted); font-size: .9rem; line-height: 1.7; margin: -2px 0 17px; }
-.articles-section { background: #fff url("assets/backgrounds/light-wave-bg.png") center / cover no-repeat; }
+.articles-section { background: transparent; }
 .article-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .article-card { overflow: hidden; border: 1px solid #dbe8f3; border-radius: 18px; background: #fff; box-shadow: 0 7px 20px #0635670d; }
 .article-card img { display: block; width: 100%; height: 170px; object-fit: cover; }
