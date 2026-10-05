@@ -8,7 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=24">
+  <link rel="stylesheet" href="air-explorer.css?v=2">
+  <script type="importmap">{"imports":{"three":"./vendor/three/three.module.js"}}</script>
+    <script type="module" src="air-explorer.js?v=5"></script>
 </head>
 <body>
   <header class="wrap">
@@ -34,6 +37,7 @@
           <span class="tag">เย็นสบาย　ใส่ใจบริการ　ดูแลทุกบ้าน</span>
           <h1>บริการแอร์ครบวงจร</h1>
           <p>ล้างแอร์ ซ่อมแอร์ ติดตั้งแอร์ โดยทีมช่างมืออาชีพ ดูแลครบทุกยี่ห้อ ทั้งบ้าน คอนโด และสำนักงาน ให้แอร์เย็นสบาย ใช้งานได้ยาวนาน</p>
+          <a class="explore-link" href="#inside-ac">สำรวจข้างในแอร์ · ดูจุดที่ต้องล้าง ↓</a>
           <a class="btn" href="tel:0971328999">☎ โทรเลย 097-132-8999</a>
           <a class="btn alt line-cta" href="https://line.me/" target="_blank" rel="noopener noreferrer"><span class="line-mark" aria-hidden="true">LINE</span> แอดไลน์สอบถาม</a>
           <div class="facts">
@@ -43,7 +47,9 @@
             <div class="fact"><b aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m2 11 10-8 10 8v10h-7v-7H9v7H2V11Z"/></svg></b>ดูแลทั้งบ้าน<br>คอนโด และสำนักงาน</div>
           </div>
         </div>
-        <img class="hero-img" src="assets/celar-air-hero.png" alt="ช่างกำลังล้างเครื่องปรับอากาศภายในบ้าน" fetchpriority="high" decoding="async">
+        <div class="hero-model hero-photo" aria-label="ภาพประชาสัมพันธ์บริการ Celar Air นครปฐม">
+          <img class="hero-banner" src="assets/celar-air-hero-reference.png" alt="ทีมช่าง Celar Air กำลังล้างแอร์ พร้อมรถบริการของทีมช่าง" fetchpriority="high">
+        </div>
       </div>
     </section>
     <section class="services">
@@ -89,7 +95,159 @@
         </div>
       </div>
     </section>
+    <div class="dark-gallery-group">
+    <section class="content-section workflow-section" id="workflow" aria-labelledby="workflow-title">
+      <div class="wrap">
+        <div class="section-heading centered">
+          <span class="tag">ทำงานเป็นขั้นตอน เห็นภาพจริง</span>
+          <h2 id="workflow-title">ขั้นตอนการทำงานของเรา</h2>
+          <p>ดูรูปผลงานจริงของทีมช่าง ตั้งแต่เตรียมอุปกรณ์ ถอดชิ้นส่วน ล้างทำความสะอาด และประกอบกลับ</p>
+        </div>
+        <div class="workflow-grid">
+          <article class="workflow-card"><div class="workflow-image"><img src="assets/workflow/01.jpg?v=2" alt="ช่างกำลังเตรียมอุปกรณ์ก่อนเริ่มล้างแอร์" loading="lazy" decoding="async"><span>01</span></div><div><h3>เตรียมอุปกรณ์</h3><p>จัดอุปกรณ์และคลุมเครื่องให้พร้อมสำหรับการล้าง</p></div></article>
+          <article class="workflow-card"><div class="workflow-image"><img src="assets/workflow/02.jpg?v=2" alt="ช่างกำลังถอดชิ้นส่วนเครื่องปรับอากาศ" loading="lazy" decoding="async"><span>02</span></div><div><h3>ถอดชิ้นส่วน</h3><p>ถอดฝาครอบ แผ่นกรอง และชิ้นส่วนที่ต้องทำความสะอาด</p></div></article>
+          <article class="workflow-card"><div class="workflow-image"><img src="assets/workflow/03.jpg?v=2" alt="ช่างกำลังล้างทำความสะอาดภายในเครื่องปรับอากาศ" loading="lazy" decoding="async"><span>03</span></div><div><h3>ล้างทำความสะอาด</h3><p>ล้างคอยล์ พัดลม รางน้ำ และจุดสะสมคราบตามสภาพเครื่อง</p></div></article>
+          <article class="workflow-card"><div class="workflow-image"><img src="assets/workflow/04.jpg?v=2" alt="ช่างกำลังประกอบเครื่องปรับอากาศหลังล้าง" loading="lazy" decoding="async"><span>04</span></div><div><h3>ประกอบกลับ</h3><p>ประกอบชิ้นส่วนกลับให้เรียบร้อย พร้อมส่งมอบเครื่องที่สะอาด</p></div></article>
+        </div>
+      </div>
+    </section>
+    <section class="content-section before-after-section motion-reveal" id="before-after" aria-labelledby="before-after-title">
+      <div class="wrap">
+        <div class="section-heading centered">
+          <span class="tag">เห็นผลลัพธ์จากงานจริง</span>
+          <h2 id="before-after-title">ผลงานก่อน–หลังล้างแอร์</h2>
+          <p>รวมภาพงานก่อน–หลังจากหลายจุดของเครื่อง กดแต่ละภาพเพื่อดูรายละเอียดและภาพขนาดใหญ่</p>
+        </div>
+        <div class="gallery-carousel" data-carousel="before-after" aria-label="สไลด์ผลงานก่อนและหลังล้างแอร์">
+          <button class="carousel-arrow carousel-prev" type="button" data-carousel-prev aria-label="ดูผลงานก่อนหน้าหลังล้างแอร์">‹</button>
+          <div class="carousel-viewport">
+            <div class="carousel-track" data-gallery-track></div>
+          </div>
+          <button class="carousel-arrow carousel-next" type="button" data-carousel-next aria-label="ดูผลงานถัดไปหลังล้างแอร์">›</button>
+          <div class="carousel-meta"><span data-carousel-status>1 / 16</span><span>เลื่อนอัตโนมัติ · กดภาพเพื่อดูรายละเอียด</span></div>
+        </div>
+      </div>
+    </section>
+    </div>
+    <section class="content-section cleaning-section" id="cleaning" aria-labelledby="cleaning-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="tag">ดูแลให้แอร์เย็นสะอาด</span>
+          <h2 id="cleaning-title">ล้างแอร์</h2>
+          <p>ล้างอย่างละเอียดตั้งแต่ฝาครอบ แผ่นกรอง คอยล์เย็น พัดลม และถาดน้ำทิ้ง พร้อมป้องกันพื้นที่ก่อนเริ่มงาน</p>
+        </div>
+        <div class="cleaning-layout">
+          <div class="cleaning-visual">
+            <img src="assets/service-cleaning.png" alt="ช่าง Celar Air กำลังล้างคอยล์เย็นของเครื่องปรับอากาศ" loading="lazy" decoding="async">
+            <span class="visual-badge">สะอาด เย็นสบาย ใส่ใจทุกขั้นตอน</span>
+          </div>
+          <div class="cleaning-content">
+            <h3>ล้างครบทุกจุดที่มีผลต่อความเย็น</h3>
+            <p>ทีมช่างตรวจสภาพแอร์ก่อนล้าง อธิบายจุดที่พบ และทดสอบการทำงานหลังประกอบกลับ เพื่อให้คุณใช้งานได้อย่างมั่นใจ</p>
+            <div class="cleaning-points">
+              <div class="cleaning-point"><span>01</span><div><b>เตรียมพื้นที่และถอดชิ้นส่วน</b><p>คลุมพื้นที่ใช้งานและถอดชิ้นส่วนตามขั้นตอนอย่างปลอดภัย</p></div></div>
+              <div class="cleaning-point"><span>02</span><div><b>ล้างฝุ่นและคราบสะสม</b><p>ทำความสะอาดคอยล์ พัดลม รางน้ำ และแผ่นกรองตามสภาพจริง</p></div></div>
+              <div class="cleaning-point"><span>03</span><div><b>ประกอบและทดสอบก่อนส่งมอบ</b><p>ตรวจน้ำทิ้ง แรงลม อุณหภูมิ และความเรียบร้อยก่อนจบงาน</p></div></div>
+            </div>
+            <a class="btn" href="contact.html">นัดหมายล้างแอร์ →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="ac-explorer" id="inside-ac" aria-labelledby="explorer-title">
+      <div class="wrap">
+        <div class="explorer-heading"><div><span class="tag">ใส่ใจถึงชิ้นส่วนข้างใน</span><h2 id="explorer-title">ล้างตรงไหน…สำคัญอย่างไร?</h2><p>ลองแยกชิ้นส่วน แล้วคลิกบนตัวแอร์เพื่อดูเหตุผลและจุดตรวจของแต่ละส่วน</p></div><span class="explorer-badge">INTERACTIVE 3D</span></div>
+        <div class="explorer-layout">
+          <div class="explorer-stage">
+            <div class="stage-top"><span id="view-state">มุมมองตัวเครื่อง</span><button id="reset-view" type="button">คืนมุมมอง</button></div>
+            <div id="ac-canvas" role="group" aria-label="โมเดลแอร์แยกชิ้นส่วน ลากเพื่อหมุน หรือเลือกชิ้นส่วนจากปุ่มด้านข้าง"><p class="viewer-loading" id="viewer-status">กำลังเตรียมโมเดลแอร์…</p><div id="part-labels"></div></div>
+            <div class="explode-controls"><button type="button" id="explode-toggle" aria-pressed="false" disabled>แยกชิ้นส่วนแอร์</button><label for="explode-range">ระดับการแยก <output id="explode-value">0%</output></label><input type="range" id="explode-range" min="0" max="100" value="0" disabled aria-label="ระดับการแยกชิ้นส่วน"></div>
+            <p class="stage-help">ลากเพื่อหมุน · เลื่อนเมาส์หรือ pinch เพื่อซูม · แตะชิ้นส่วนหรือหมายเลขเพื่ออ่านรายละเอียด</p>
+          </div>
+          <div class="explorer-info">
+            <div class="part-picker" aria-label="เลือกชิ้นส่วนแอร์">
+              <button type="button" data-part="cover" aria-pressed="true"><span>01</span> ฝาครอบ</button>
+              <button type="button" data-part="filter" aria-pressed="false"><span>02</span> แผ่นกรอง</button>
+              <button type="button" data-part="coil" aria-pressed="false"><span>03</span> คอยล์เย็น</button>
+              <button type="button" data-part="fan" aria-pressed="false"><span>04</span> พัดลม</button>
+              <button type="button" data-part="drain" aria-pressed="false"><span>05</span> ถาดน้ำทิ้ง</button>
+            </div>
+            <article id="part-detail" aria-live="polite" aria-atomic="true"><span class="detail-kicker" id="part-kicker">01 / 05 · ตัวเครื่องภายนอก</span><h3 id="part-title">ฝาครอบและบานสวิง</h3><p id="part-role">ดูแลความสะอาดภายนอก และทิศทางลมที่ส่งเข้าห้อง</p><h4>ทำไมจุดนี้ต้องล้าง?</h4><p id="part-why">ฝุ่นและคราบสะสมตามฝาครอบ รอยต่อ และบานสวิง ควรทำความสะอาดตามวิธีที่ผู้ผลิตกำหนด</p><h4>จุดที่ควรตรวจอย่างละเอียด</h4><ul id="part-checks"><li>คราบฝุ่นตามรอยต่อและช่องลม</li><li>สภาพตัวล็อกฝาครอบและรอยแตกร้าว</li><li>การเปิด–ปิดและทิศทางของบานสวิง</li></ul><div class="detail-result"><span>หลังทำความสะอาด</span><p id="part-result">ตรวจความเรียบร้อยของฝาครอบ และทดสอบบานสวิงอีกครั้ง</p></div></article>
+            <a class="inspection-cta" href="contact.html">สอบถามบริการล้างและตรวจเช็กแอร์ →</a>
+          </div>
+        </div>
+        <p class="explorer-note">แบบจำลองเพื่ออธิบายชิ้นส่วน ตำแหน่งจริงและวิธีถอดขึ้นอยู่กับรุ่นของแอร์ · รายการตรวจและขอบเขตบริการยืนยันกับช่างก่อนเริ่มงาน</p>
+        <details class="care-source"><summary>ข้อมูลอ้างอิงเรื่องการดูแลแอร์</summary><a href="https://www.energystar.gov/saveathome/heating-cooling/maintenance-checklist" target="_blank" rel="noopener">ENERGY STAR — Maintenance Checklist</a></details>
+      </div>
+    </section>
+    <section class="content-section why-section" id="why-celar-air" aria-labelledby="why-title">
+      <div class="wrap">
+        <div class="section-heading centered">
+          <span class="tag">บริการที่คิดถึงบ้านของคุณ</span>
+          <h2 id="why-title">ทำไมต้อง Celar Air</h2>
+          <p>เพราะงานแอร์ที่ดีควรตรวจละเอียด สื่อสารชัดเจน และดูแลพื้นที่ของคุณเหมือนบ้านของเรา</p>
+        </div>
+        <div class="why-grid">
+          <article class="why-card"><span class="why-number">01</span><h3>ช่างมีประสบการณ์</h3><p>ทีมช่างดูแลงานล้าง ซ่อม และติดตั้งแอร์หลายรูปแบบ</p></article>
+          <article class="why-card"><span class="why-number">02</span><h3>แจ้งรายละเอียดก่อนทำ</h3><p>อธิบายสภาพหน้างานและขอบเขตบริการให้เข้าใจก่อนเริ่ม</p></article>
+          <article class="why-card"><span class="why-number">03</span><h3>ใส่ใจความสะอาด</h3><p>ป้องกันพื้นที่ เก็บงานเรียบร้อย และตรวจความสะอาดหลังบริการ</p></article>
+          <article class="why-card"><span class="why-number">04</span><h3>ติดต่อสะดวก</h3><p>นัดหมายง่าย ตรงเวลา และมีช่องทางสอบถามหลังรับบริการ</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="content-section reviews-section motion-reveal" id="reviews" aria-labelledby="reviews-title">
+      <div class="wrap">
+        <div class="section-heading centered">
+          <span class="tag">เสียงจากผู้ใช้บริการ</span>
+          <h2 id="reviews-title">รีวิวจากลูกค้าที่ใช้บริการ</h2>
+          <p>รวมรีวิวที่คุณเตรียมไว้ทั้งหมด เลื่อนไปดูต่อได้อัตโนมัติ และกดเพื่อเปิดภาพใหญ่</p>
+        </div>
+        <div class="gallery-carousel" data-carousel="reviews" aria-label="สไลด์รีวิวจากลูกค้า">
+          <button class="carousel-arrow carousel-prev" type="button" data-carousel-prev aria-label="ดูรีวิวก่อนหน้า">‹</button>
+          <div class="carousel-viewport">
+            <div class="carousel-track" data-gallery-track></div>
+          </div>
+          <button class="carousel-arrow carousel-next" type="button" data-carousel-next aria-label="ดูรีวิวถัดไป">›</button>
+          <div class="carousel-meta"><span data-carousel-status>1 / 21</span><span>เลื่อนอัตโนมัติ · กดภาพเพื่อดูรีวิวขนาดใหญ่</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="content-section faq-section" id="faq" aria-labelledby="faq-title">
+      <div class="wrap faq-layout">
+        <div class="section-heading">
+          <span class="tag">ตอบข้อสงสัยก่อนนัดหมาย</span>
+          <h2 id="faq-title">คำถามที่พบบ่อย</h2>
+          <p>ถ้ายังไม่พบคำตอบที่ต้องการ ติดต่อทีมงานเพื่อประเมินหน้างานและแนะนำบริการที่เหมาะกับคุณ</p>
+          <a class="btn" href="contact.html">คุยกับทีมช่าง →</a>
+        </div>
+        <div class="faq-list">
+          <details open><summary>ควรล้างแอร์บ่อยแค่ไหน?</summary><p>บ้านพักอาศัยทั่วไปควรตรวจและล้างประมาณทุก 6–12 เดือน หากเปิดทุกวัน มีสัตว์เลี้ยง หรืออยู่ในพื้นที่ฝุ่นมาก อาจต้องล้างถี่ขึ้น</p></details>
+          <details><summary>ใช้เวลาล้างแอร์นานเท่าไร?</summary><p>โดยทั่วไปใช้เวลาประมาณ 45–90 นาทีต่อเครื่อง ขึ้นอยู่กับรุ่น ระดับคราบ และการถอดล้างที่จำเป็น</p></details>
+          <details><summary>ต้องเตรียมอะไรให้ช่างก่อนเข้าบริการ?</summary><p>เตรียมพื้นที่ใต้เครื่องให้โล่ง แจ้งอาการหรือจุดที่กังวล และแจ้งข้อมูลรุ่นแอร์ถ้ามี เพื่อให้ช่างเตรียมอุปกรณ์ได้เหมาะสม</p></details>
+          <details><summary>หลังล้างแอร์ควรตรวจอะไรบ้าง?</summary><p>ควรทดสอบแรงลม อุณหภูมิ น้ำทิ้ง เสียงสั่น และตรวจความเรียบร้อยของฝาครอบก่อนรับงาน</p></details>
+        </div>
+      </div>
+    </section>
+    <section class="content-section articles-section" id="articles" aria-labelledby="articles-title">
+      <div class="wrap">
+        <div class="heading"><div><span class="tag">สาระน่ารู้เรื่องแอร์</span><h2 id="articles-title">บทความ</h2><p>เคล็ดลับดูแลแอร์ให้อยู่กับบ้านของคุณได้นานขึ้น</p></div><a class="all" href="services.html">ดูบริการทั้งหมด　→</a></div>
+        <div class="article-grid">
+          <article class="article-card"><img src="assets/service-cleaning.png" alt="ช่างกำลังทำความสะอาดเครื่องปรับอากาศ" loading="lazy" decoding="async"><div><span>ดูแลแอร์</span><h3>แอร์ควรล้างเมื่อไร ดูจากสัญญาณเหล่านี้</h3><p>เช็กกลิ่นอับ ฝุ่นสะสม น้ำหยด และแรงลมที่ลดลงก่อนเรียกช่าง</p><a href="#cleaning">อ่านต่อ →</a></div></article>
+          <article class="article-card"><img src="assets/service-repair.png" alt="ช่างกำลังตรวจเช็กเครื่องปรับอากาศ" loading="lazy" decoding="async"><div><span>ตรวจเช็ก</span><h3>5 จุดที่ควรตรวจเมื่อแอร์ไม่เย็น</h3><p>เริ่มจากแผ่นกรอง คอยล์เย็น พัดลม น้ำทิ้ง และการทำงานของเครื่อง</p><a href="#inside-ac">อ่านต่อ →</a></div></article>
+          <article class="article-card"><img src="assets/service-installation.png" alt="ช่างกำลังติดตั้งเครื่องปรับอากาศ" loading="lazy" decoding="async"><div><span>คำแนะนำ</span><h3>เตรียมบ้านอย่างไรก่อนช่างเข้าติดตั้งแอร์</h3><p>เลือกตำแหน่งให้เหมาะ เตรียมทางเดิน และคุยขอบเขตงานให้ชัดเจน</p><a href="#why-celar-air">อ่านต่อ →</a></div></article>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="foot"><div class="wrap"><a class="brand" href="index.html"><i class="mark" aria-hidden="true">❄</i>Celar Air</a><small>โทร 097-132-8999 · celarair@gmail.com</small></div></footer>
-</body>
+  <dialog class="gallery-lightbox" id="review-lightbox" aria-labelledby="lightbox-title">
+    <div class="lightbox-shell">
+      <button class="lightbox-close" id="lightbox-close" type="button" aria-label="ปิดภาพขนาดใหญ่">×</button>
+      <p id="lightbox-title">รายละเอียดภาพ</p>
+      <p id="lightbox-description"></p>
+      <img id="lightbox-image" src="" alt="">
+    </div>
+  </dialog>
+  <script src="gallery.js?v=4" defer></script>
+<script src="footer.js?v=1" defer></script><script src="floating-contact.js?v=1" defer></script></body>
 </html>
