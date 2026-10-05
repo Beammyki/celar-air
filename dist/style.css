@@ -71,22 +71,25 @@ a { text-decoration: none; color: inherit; }
 .line-mark { display: inline-grid; place-items: center; width: 25px; height: 25px; margin-right: 7px; border-radius: 50%; background: #fff; color: #00a94f; font-family: Arial, sans-serif; font-size: .52rem; font-weight: 800; vertical-align: middle; }
 .line-cta { color: var(--blue) !important; }
 .line-cta .line-mark { border: 0; background: #1680f5; color: #fff; }
-.floating-contact { position: fixed; z-index: 1000; right: 18px; bottom: 22px; display: grid; gap: 10px; width: min(270px, calc(100vw - 32px)); pointer-events: none; }
-.floating-contact-link { position: relative; display: grid; grid-template-columns: 78px 1fr 40px; align-items: center; min-height: 82px; padding: 6px 10px 6px 7px; overflow: hidden; border: 1px solid #ffffff60; border-radius: 18px; color: #fff; box-shadow: 0 10px 24px #08234225; pointer-events: auto; isolation: isolate; opacity: .84; backdrop-filter: blur(4px); transition: transform .22s cubic-bezier(.2,0,0,1), box-shadow .22s ease, filter .22s ease, opacity .22s ease; }
+.floating-contact { position: fixed; z-index: 1000; right: 18px; bottom: 22px; display: grid; justify-items: end; gap: 10px; width: min(270px, calc(100vw - 32px)); pointer-events: none; }
+.floating-contact-link { position: relative; display: grid; grid-template-columns: 72px 0 0; align-items: center; justify-content: center; width: 76px; min-height: 76px; padding: 2px; overflow: hidden; border: 1px solid #ffffff60; border-radius: 50%; color: #fff; box-shadow: 0 10px 24px #08234225; pointer-events: auto; isolation: isolate; opacity: .84; backdrop-filter: blur(4px); transition: width .32s cubic-bezier(.2,0,0,1), min-height .32s cubic-bezier(.2,0,0,1), padding .32s ease, border-radius .32s ease, transform .22s cubic-bezier(.2,0,0,1), box-shadow .22s ease, filter .22s ease, opacity .22s ease; }
 .floating-contact-link::after { content: ""; position: absolute; inset: 0; z-index: -1; opacity: .8; background: linear-gradient(110deg, #ffffff20, transparent 42%); pointer-events: none; }
-.floating-contact-link:hover, .floating-contact-link:focus-visible { transform: translateX(-4px); box-shadow: 0 14px 30px #08234238; filter: saturate(1.08); opacity: 1; }
+.floating-contact-link:hover, .floating-contact-link:focus-visible { grid-template-columns: 78px 1fr 40px; justify-content: initial; width: min(270px, calc(100vw - 32px)); min-height: 82px; padding: 6px 10px 6px 7px; border-radius: 18px; transform: translateX(-4px); box-shadow: 0 14px 30px #08234238; filter: saturate(1.08); opacity: 1; }
 .floating-line { background: linear-gradient(135deg, #43c879bd, #78dfa0bd); }
 .floating-call { background: linear-gradient(135deg, #f4ca5fbd, #ffe69abd); color: #16253b; }
 .floating-mascot { position: relative; display: block; width: 74px; height: 70px; overflow: hidden; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
 .floating-mascot img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; transform: none; }
-.floating-copy { display: grid; gap: 2px; min-width: 0; }
+.floating-copy { display: grid; gap: 2px; min-width: 0; opacity: 0; transform: translateX(12px); pointer-events: none; transition: opacity .18s ease .08s, transform .32s cubic-bezier(.2,0,0,1) .04s; }
+.floating-contact-link:hover .floating-copy, .floating-contact-link:focus-visible .floating-copy { opacity: 1; transform: none; pointer-events: auto; }
 .floating-copy b { font-size: .9rem; line-height: 1.2; white-space: nowrap; }
 .floating-copy small { font-size: .72rem; line-height: 1.25; opacity: .9; white-space: nowrap; }
-.floating-icon { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid #ffffff99; border-radius: 50%; background: #ffffff24; font-size: .57rem; font-weight: 900; }
+.floating-icon { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid #ffffff99; border-radius: 50%; background: #ffffff24; font-size: .57rem; font-weight: 900; opacity: 0; transform: scale(.8); pointer-events: none; transition: opacity .18s ease .1s, transform .22s ease .1s; }
+.floating-contact-link:hover .floating-icon, .floating-contact-link:focus-visible .floating-icon { opacity: 1; transform: none; pointer-events: auto; }
 .floating-call .floating-icon { border-color: #172b46aa; background: #ffffff44; font-size: 1.1rem; }
 @media (max-width: 540px) {
   .floating-contact { right: 10px; bottom: 12px; width: min(226px, calc(100vw - 20px)); gap: 7px; }
-  .floating-contact-link { grid-template-columns: 59px 1fr 32px; min-height: 66px; padding: 4px 7px 4px 4px; border-radius: 15px; }
+  .floating-contact-link { grid-template-columns: 58px 0 0; width: 62px; min-height: 62px; padding: 2px; }
+  .floating-contact-link:hover, .floating-contact-link:focus-visible { grid-template-columns: 59px 1fr 32px; width: min(226px, calc(100vw - 20px)); min-height: 66px; padding: 4px 7px 4px 4px; border-radius: 15px; }
   .floating-mascot { width: 56px; height: 56px; border-radius: 0; }
   .floating-copy b { font-size: .74rem; }
   .floating-copy small { font-size: .62rem; }
