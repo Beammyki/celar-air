@@ -50,6 +50,14 @@ dist/floating-contact.js  ปุ่มโทรและ LINE แบบลอย
 
 ใช้โฟลเดอร์ `dist` เป็นโฟลเดอร์สำหรับเผยแพร่ เว็บไซต์ static สามารถใช้งานบน URL ฟรีของ Cloudflare Pages ในรูปแบบ `*.pages.dev` ได้ โดยไม่ต้องมีเซิร์ฟเวอร์เพิ่มเติม
 
+เว็บไซต์ที่ deploy แล้ว: [https://celarair.pages.dev](https://celarair.pages.dev)
+
+คำสั่ง deploy ด้วย Wrangler:
+
+```powershell
+wrangler pages deploy dist --project-name celarair --branch main
+```
+
 หากต้องการใช้ `celarair.dev` หรือ `www.celarair.dev` ต้องมีโดเมนดังกล่าวอยู่ในบัญชีของคุณก่อน แล้วจึงเพิ่ม DNS record ตามค่าที่ Cloudflare แสดงให้ในหน้าตั้งค่าโดเมน
 
 ## ข้อมูลติดต่อ
